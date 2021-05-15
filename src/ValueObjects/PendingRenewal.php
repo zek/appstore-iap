@@ -64,7 +64,9 @@ final class PendingRenewal
         $obj->originalTransactionId = $attributes['original_transaction_id'];
         $obj->productId = $attributes['product_id'];
 
-        $obj->priceConsentStatus = isset($attributes['price_consent_status']) && (int)$attributes['price_consent_status'] === 1;
+        if (isset($attributes['price_consent_status'])) {
+            $obj->priceConsentStatus = (int)$attributes['price_consent_status'] === 1;
+        }
         $obj->expirationIntent = isset($attributes['expiration_intent']) ? new ExpirationIntent($attributes['expiration_intent']) : null;
         $obj->offerCodeRefName = $attributes['offer_code_ref_name'] ?? null;
         $obj->gracePeriodExpiresDate = isset($attributes['grace_period_expires_date_ms']) ? new Time($attributes['grace_period_expires_date_ms']) : null;
