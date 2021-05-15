@@ -15,4 +15,10 @@ final class ExpirationIntent
     {
         $this->value = $value;
     }
+    
+    public function getIntent()
+    {
+        return $this->value;
+    }
+
 }
