@@ -31,7 +31,7 @@ final class PendingRenewal
     private $productId;
 
     /**
-     * @var bool
+     * @var bool|null
      */
     private $priceConsentStatus;
 
@@ -113,9 +113,9 @@ final class PendingRenewal
     }
 
     /**
-     * @return bool
+     * @return bool|null
      */
-    public function isPriceConsentStatus(): bool
+    public function isPriceConsentStatus(): ?bool
     {
         return $this->priceConsentStatus;
     }
