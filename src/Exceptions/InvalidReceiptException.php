@@ -26,6 +26,7 @@ class InvalidReceiptException extends Exception
         21100 => 'Internal data access error.',
         21199 => 'Internal data access error.',
         21104 => 'There is no information for In-App purchases. Try again later',
+        21107 => 'There is no information for In-App purchases. Try again later',
     ];
 
     /**
